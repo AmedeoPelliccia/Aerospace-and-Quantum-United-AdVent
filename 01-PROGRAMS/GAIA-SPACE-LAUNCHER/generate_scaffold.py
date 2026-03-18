@@ -27,7 +27,7 @@ from __future__ import annotations
 import argparse
 import os
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 # ---------------------------------------------------------------------------
 # Taxonomy definition – edit this dict to extend/modify the scaffold
@@ -38,7 +38,7 @@ from typing import Dict, List, Tuple
 # of (chapter_code, chapter_title, [section_titles]) tuples.
 
 Axis = str
-SubAxis = str | None
+SubAxis = Optional[str]
 Chapter = Tuple[str, str, List[str]]
 
 TAXONOMY: Dict[Axis, Dict[SubAxis, List[Chapter]]] = {
@@ -744,7 +744,7 @@ def taxonomy_summary() -> dict:
 # ---------------------------------------------------------------------------
 
 
-def main(argv: list[str] | None = None) -> None:
+def main(argv: Optional[List[str]] = None) -> None:
     parser = argparse.ArgumentParser(
         description="Generate GAIA-SL1 OPT-IN 5-axis scaffold."
     )
