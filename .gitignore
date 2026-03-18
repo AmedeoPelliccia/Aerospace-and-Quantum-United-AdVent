@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Generated scaffold output (run generate_scaffold.py to recreate)
+GAIA-SL1-SCAFFOLD/
+*.zip
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test / cache
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
